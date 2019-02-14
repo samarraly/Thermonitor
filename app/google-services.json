@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "359486822120",
+    "firebase_url": "https://thermonitor-372c8.firebaseio.com",
+    "project_id": "thermonitor-372c8",
+    "storage_bucket": "thermonitor-372c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359486822120:android:3b7298d42b91488b",
+        "android_client_info": {
+          "package_name": "guc.edu.thermonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359486822120-7737qdnoa5uar7f4jrk4kemg818jbn8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATFVqd5ssiQfBBGg1f06QNKxQka2LsM_c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

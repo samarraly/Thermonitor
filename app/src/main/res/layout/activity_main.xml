@@ -4,52 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#D1D0CE"
+    tools:context=".MainActivity"
+
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="top|center"
-        android:orientation="vertical"
-        >
-
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:text="Hello!" />
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="360dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:ems="10"
-            android:hint="email"
+            android:layout_margin="0dp"
+            android:background="@drawable/edittext_style"
+            android:backgroundTint="#D1D0CE"
+            android:hint="Email"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/password"
-
-            android:layout_width="360dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:ems="10"
-            android:hint="password"
+            android:layout_margin="0dp"
+            android:background="@drawable/edittext_style"
+            android:backgroundTint="#D1D0CE"
+            android:hint="Password"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/login"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_edit"
+            android:text="LOGIN" />
+
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="LOGIN" />
+            android:layout_margin="20dp"
+            android:background="@drawable/edittext_style"
+            android:backgroundTint="#D1D0CE"
+            android:text="Not Having An Account? Sign Up"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_edit"
+            android:backgroundTint="#848482"
+            android:text="REGISTER" />
+
+
+
     </LinearLayout>
 
 </RelativeLayout>
