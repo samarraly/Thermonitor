@@ -90,7 +90,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String password = text2.getText().toString().trim();
         String confirmpass = text3.getText().toString().trim();
 
-        if (text1.getText().toString().isEmpty() || text2.getText().toString().isEmpty()||  text3.getText().toString().isEmpty()  ) {
+        if (text1.getText().toString().isEmpty() || text2.getText().toString().isEmpty()||  text3.getText().toString().isEmpty() ) {
             Toast.makeText(this, "PLEASE VERIFY ALL FIELDS", Toast.LENGTH_LONG).show();
             return;
         }
