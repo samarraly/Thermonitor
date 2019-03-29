@@ -14,6 +14,7 @@ import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +32,8 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -78,12 +81,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
-    // private void OpenMainActivity () {
-    //       Intent in = new Intent(RegisterActivity.this, MainActivity.class);
-    //     startActivity(in);
-
-    //}
-
 
     private void registeruser() {
         String email = text1.getText().toString().trim();
@@ -98,6 +95,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if(!(text3.getText().toString().equals(text2.getText().toString()))){
             Toast.makeText(this, "PASSWORD AND CONFIRM PASSWORD DO NOT MATCH", Toast.LENGTH_LONG).show();
             return;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+          Toast.makeText(this,"PLEASE ENTER VALID EMAIL ADDREESS",Toast.LENGTH_LONG).show();
         }
 
         //    button1.setVisibility(View.VISIBLE);
@@ -124,10 +124,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    ProgressDialog.hide();
-                    showmessage("REGISTERED SUCCESSFULLY");
-                    updateUI();
-                    finish();
+                    firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                ProgressDialog.hide();
+                                showmessage("REGISTERED SUCCESSFULLY,PLEASE CHECK YOUR EMAIL");
+
+                                    updateUI();
+                                    finish();
+
+
+                        }
+                        else{
+                            Toast.makeText(RegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                            }
+                        }
+
+                    });
+
 
                 } else {
                     ProgressDialog.hide();

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "359486822120-rhd3kldr4un43bkemfm4eqad32gdovmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "guc.edu.thermonitor",
+            "certificate_hash": "573c6f97c9df70c091662a6aca42db4d4692628e"
+          }
+        },
+        {
           "client_id": "359486822120-7737qdnoa5uar7f4jrk4kemg818jbn8r.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359486822120-2fteom3staru9nbdpscr0cst2kjc4jm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
