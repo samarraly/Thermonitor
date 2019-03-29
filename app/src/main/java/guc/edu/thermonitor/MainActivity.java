@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (firebaseAuth.getCurrentUser().isEmailVerified()) {
                         loadingDialog.hide();
                         showmessage("SIGNED IN SUCCESSFULLY");
-                        Intent in = new Intent(MainActivity.this, DeviceDetailActivity.class);
+                        Intent in = new Intent(MainActivity.this, listActivity.class);
                         startActivity(in);
                         //onStart();
                         //    finish();
