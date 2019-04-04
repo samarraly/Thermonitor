@@ -198,10 +198,7 @@ public class listActivity extends AppCompatActivity {
     };
 
     //Preventing back pressing
-    @Override
-    public void onBackPressed(){
-        Toast.makeText(listActivity.this,"Can't Go Back. Log Out",Toast.LENGTH_LONG).show();
-    }
+
 
     //Custom adapter class
     class CustomAdapter extends BaseAdapter{
@@ -243,7 +240,7 @@ public class listActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("874551466482-tjvm46r9lsvnj1k5k4qefs8ocmj5po1r.apps.googleusercontent.com")
+                .requestIdToken("359486822120-7737qdnoa5uar7f4jrk4kemg818jbn8r.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         mGoogleSignInClient = new GoogleApiClient.Builder(this)
