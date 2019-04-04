@@ -143,6 +143,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
                 celsius.setText(temperature.getCelsius());
                 fahrenheit.setText(temperature.getFahrenheit());
 
+
             }
             else{
                 Temperature temperature = new Temperature();
