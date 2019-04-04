@@ -142,6 +142,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
                 temperature.setFahrenheit(ds.child("MyESPT").getValue(Temperature.class).getFahrenheit());
                 celsius.setText(temperature.getCelsius());
                 fahrenheit.setText(temperature.getFahrenheit());
+
             }
             else{
                 Temperature temperature = new Temperature();
